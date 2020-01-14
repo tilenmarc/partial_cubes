@@ -1,3 +1,6 @@
+# The script goes through all the partial cubes of isometric dimension
+# at most 5 and check which ones are COMs, OMs, etc.
+
 from sage.all_cmdline import *
 
 load('PCproperties.sage')
@@ -5,7 +8,7 @@ load('PCproperties.sage')
 o = open('partial_cubes_i5.txt')
 
 results = {}
-for i in range(1, 7):
+for i in range(1, 6):
     results[i] = 14 * [0]
     # all, well-embedded, com, om, pasch, hypercellular, Polat, cellular, median, peano, netlike,  treezone, LOP, almost median
 
