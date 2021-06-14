@@ -9,7 +9,7 @@ class PCproperties:
         check, self.labels = G.is_partial_cube(certificate=True)
         assert check, 'G is not a partial cube'
         self.G.relabel(self.labels)
-        self.dimension = len(self.labels.values()[0])
+        self.dimension = len(list(self.labels.values())[0])
         self.COM = None
         self.OM = None
         self.LOP = None
@@ -293,11 +293,11 @@ class PCproperties:
         for e in range(self.dimension):
             contracted = contract_and_restrict(self.G, [e], [], [])
             min_deg = min(contracted.degree_sequence())
-            print min_deg, contracted.degree_sequence().count(min_deg)
+            print(min_deg, contracted.degree_sequence().count(min_deg))
         for e in Combinations(range(self.dimension), 2):
             contracted = contract_and_restrict(self.G, e, [], [])
             min_deg = min(contracted.degree_sequence())
-            print min_deg, contracted.degree_sequence().count(min_deg)
+            print(min_deg, contracted.degree_sequence().count(min_deg))
 
     # works only for loopsided
     def euclidean(self, max_dim):
@@ -326,7 +326,7 @@ class PCproperties:
                             class_to_cube[tuple(sorted([x, y, w]))] = z
                             break
             if not intersect:
-                print x, y, w, 'not_intersect'
+                print(x, y, w, 'not_intersect')
 
         def covector_dist(x, y):
             return min([self.distances[i][j] for i in x for j in y])
@@ -349,7 +349,7 @@ class PCproperties:
             dicograph.plot(vertex_labels=False).save('dicograph.png')
             if not dicograph.is_directed_acyclic():
                 dicograph.plot(vertex_labels=False).save('dicograph.png')
-                print 'not acyclic', x
+                print('not acyclic', x)
 
     def is_appiculate(self):
         for v in self.G.vertices():
