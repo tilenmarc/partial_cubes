@@ -3,7 +3,7 @@ This repository includes some simple functions to work with partial cubes that I
 
 The code is not documented since it was inteneded only for private use; hopefully I will do this in the future.
 Nevertheless, one can chech `get_stat.sage` for an example of usage. In file `partial_cubes_i5.txt` are written
-all the partial cubes of isometric dimension at most 5, by their graph6 string epresentation. In files `antipodal7a.txt` and `antipodal7b.txt` are all antipodal partial cubes with isometric dimension 7.
+all the partial cubes of isometric dimension at most 5, by their graph6 string epresentation. In files `antipodal7a.txt` and `antipodal7b.txt` are all the antipodal partial cubes with isometric dimension 7, while in `antipodal6.txt` are all the antipodal partial cubes with isometric dimension 6.
 
 Parial cubes of isometric dimension 6 are not uploaded to github, since the file is too big. They can be obtained on demand by sending a mail to tilen.marc@fmf.uni-lj.si
 
